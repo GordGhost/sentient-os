@@ -1,0 +1,28 @@
+{
+  "name": "Token Scam Analyzer",
+  "slug": "token-scam-analyzer",
+  "description": "Analyze token risk, scam signals, deployer behaviour, holder patterns, and suspicious launch activity.",
+  "category": "crypto",
+  "tags": [
+    "crypto",
+    "token",
+    "scam",
+    "risk-analysis",
+    "onchain"
+  ],
+  "version": "1.0.0",
+  "author": "GordGhost",
+  "compatible_agents": [
+    "bankr",
+    "claude-code",
+    "openclaw"
+  ],
+  "required_tools": [
+    "token_search",
+    "get_token_launch_info",
+    "read_contract",
+    "market_intelligence"
+  ],
+  "install_command": "install the token-scam-analyzer skill from https://github.com/MY_GITHUB_OWNER/MY_SKILLS_REPO/tree/main/token-scam-analyzer",
+  "status": "published"
+}

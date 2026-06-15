@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;1,400&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --green: #00ff6a;
+  --cyan: #00e5ff;
+  --line-bright: #1a3d2b;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-bg text-txt font-grot antialiased;
+    background-image:
+      radial-gradient(ellipse at 50% -10%, rgba(0, 255, 106, 0.05), transparent 55%),
+      linear-gradient(rgba(26, 61, 43, 0.18) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26, 61, 43, 0.18) 1px, transparent 1px);
+    background-size: 100% 100%, 44px 44px, 44px 44px;
+    background-attachment: fixed;
+  }
+  ::selection {
+    background: var(--green);
+    color: #000;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #04070a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #16341f;
+    border: 2px solid #04070a;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1f5232;
+  }
+}
+
+@layer components {
+  /* CRT scanline overlay used by the app shell */
+  .scanlines::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent 0 2px,
+      rgba(0, 0, 0, 0.16) 2px 4px
+    );
+    mix-blend-mode: multiply;
+  }
+  .panel {
+    @apply border border-line bg-panel/70 backdrop-blur-sm;
+  }
+  .mono-label {
+    @apply font-mono text-[10px] uppercase tracking-[0.2em] text-dim;
+  }
+  .hudline {
+    @apply font-mono text-[9px] uppercase tracking-[0.18em] text-dim;
+  }
+  .code-scroll {
+    @apply font-mono text-[12.5px] leading-relaxed whitespace-pre-wrap break-words;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 18px rgba(0, 255, 106, 0.45);
+  }
+  .corner-frame {
+    position: relative;
+  }
+  .corner-frame::before,
+  .corner-frame::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-color: var(--green);
+    opacity: 0.7;
+  }
+  .corner-frame::before {
+    top: -1px;
+    left: -1px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+  }
+  .corner-frame::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+  }
+}

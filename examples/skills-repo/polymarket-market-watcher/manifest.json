@@ -1,0 +1,26 @@
+{
+  "name": "Polymarket Market Watcher",
+  "slug": "polymarket-market-watcher",
+  "description": "Analyze and monitor the subject, summarize odds/risk/signals, and produce manual decision notes. Analyze the relevant data, summarize odds / risk / signals, and produce manual decision notes only. The agent never executes, signs, places orders, or moves funds.",
+  "category": "prediction-markets",
+  "tags": [
+    "prediction-markets",
+    "odds",
+    "risk-analysis",
+    "research"
+  ],
+  "version": "1.0.0",
+  "author": "GordGhost",
+  "compatible_agents": [
+    "bankr",
+    "claude-code",
+    "openclaw"
+  ],
+  "required_tools": [
+    "market_search",
+    "get_market_odds",
+    "market_intelligence"
+  ],
+  "install_command": "install the polymarket-market-watcher skill from https://github.com/MY_GITHUB_OWNER/MY_SKILLS_REPO/tree/main/polymarket-market-watcher",
+  "status": "published"
+}

@@ -1,0 +1,12 @@
+{
+  "skill_slug": "polymarket-market-watcher",
+  "verification_prompt": "use the polymarket-market-watcher skill to run install verification. Return this exact verification code: {{verification_code}}",
+  "function_test_prompt": "use the polymarket-market-watcher skill to summarize the odds and risk for the 'will X happen by Friday' market and give me manual decision notes. Return the full structured output with every required field populated.",
+  "expected_output_fields": [
+    "summary",
+    "odds_snapshot",
+    "risk_flags",
+    "decision_notes",
+    "uncertainty"
+  ]
+}

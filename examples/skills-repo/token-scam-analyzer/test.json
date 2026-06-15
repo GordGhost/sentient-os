@@ -1,0 +1,12 @@
+{
+  "skill_slug": "token-scam-analyzer",
+  "verification_prompt": "use the token-scam-analyzer skill to run install verification. Return this exact verification code: {{verification_code}}",
+  "function_test_prompt": "use the token-scam-analyzer skill to assess the risk of the token at 0xABCD…1234 on Base and tell me if it looks like a scam. Return the full structured output with every required field populated.",
+  "expected_output_fields": [
+    "summary",
+    "findings",
+    "risk_flags",
+    "final_verdict",
+    "uncertainty"
+  ]
+}
